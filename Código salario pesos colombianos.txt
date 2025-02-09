@@ -1,0 +1,17 @@
+CASE
+  WHEN Moneda = "USD" AND Moneda - Otra = "COP" THEN Salario anual
+  WHEN Moneda = "USD" AND Moneda - Otra = "KWD" THEN Salario anual* 13432.10
+   WHEN Moneda = "USD" AND Moneda - Otra = "DKK" THEN Salario anual* 570.79
+  WHEN Moneda = "USD" THEN Salario anual * 4143.03 
+  WHEN Moneda = "CAD" THEN Salario anual * 2898.65 
+  WHEN Moneda = "GBP" THEN Salario anual * 5139.15 
+  WHEN Moneda = "EUR" THEN Salario anual * 4269.39 
+  WHEN Moneda = "AUD/NZD" THEN Salario anual * 2343.34 
+  WHEN Moneda = "CHF" THEN Salario anual * 4556.50
+  WHEN Moneda = "HKD" THEN Salario anual * 531.91
+  WHEN Moneda = "JPY" THEN Salario anual * 27.35
+  WHEN Moneda = "SEK" THEN Salario anual * 378.01
+  WHEN Moneda = "ZAR" THEN Salario anual * 224.03
+  WHEN Moneda = "Other" AND Moneda - Otra = "USD" THEN Salario anual * 3956.54 
+  ELSE Salario anual
+END

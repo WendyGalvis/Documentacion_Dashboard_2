@@ -1,0 +1,11 @@
+CASE
+  WHEN  Años experiencia específica = "1 year or less" THEN "1. 1 year or less"
+  WHEN  Años experiencia específica = "2 - 4 years" THEN "2. 2 - 4 years"
+  WHEN  Años experiencia específica= "5-7 years" THEN "3. 5-7 years"
+  WHEN  Años experiencia específica = "8 - 10 years" THEN "4. 8 - 10 years"
+  WHEN  Años experiencia específica = "11 - 20 years" THEN "5. 11 - 20 years"
+  WHEN  Años experiencia específica = "21 - 30 years" THEN "6. 21 - 30 years"
+  WHEN  Años experiencia específica = "31 - 40 years" THEN "7. 31 - 40 years"
+  WHEN Años experiencia específica = "41 years or more" THEN "8. 41 years or more"
+  ELSE NULL
+END

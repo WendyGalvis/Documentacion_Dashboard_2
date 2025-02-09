@@ -1,0 +1,14 @@
+CASE
+  WHEN Moneda = "USD" THEN Otras compensaciones * 4143.03 
+  WHEN Moneda = "CAD" THEN Otras compensaciones * 2898.65 
+  WHEN Moneda = "GBP" THEN Otras compensaciones * 5139.15 
+  WHEN Moneda = "EUR" THEN Otras compensaciones * 4269.39 
+  WHEN Moneda = "AUD/NZD" THEN Otras compensaciones* 2343.34 
+  WHEN Moneda = "CHF" THEN Otras compensaciones* 4556.50
+  WHEN Moneda = "HKD" THEN Otras compensaciones* 531.91
+  WHEN Moneda = "JPY" THEN Otras compensaciones* 27.35
+  WHEN Moneda = "SEK" THEN Otras compensaciones* 378.01
+  WHEN Moneda = "ZAR" THEN Otras compensaciones * 224.03
+  WHEN Moneda = "Other" AND Moneda - Otra = "USD" THEN Otras compensaciones * 3956.54 
+  ELSE Otras compensaciones
+END
