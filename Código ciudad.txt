@@ -1,0 +1,9 @@
+CASE
+  WHEN TRIM(LOWER(Ciudad - Sucio)) IN ("austin/ny", "austin, texas", "austin tx", "austin metro area") THEN "AUSTIN" 
+  WHEN TRIM(LOWER(Ciudad - Sucio)) IN ("boston", "boston area", "boston, ma") THEN "BOSTON" 
+  WHEN TRIM(LOWER(Ciudad - Sucio)) IN ("chicago", "chicago metro area", "chicago, il") THEN "CHICAGO" 
+  WHEN TRIM(LOWER(Ciudad - Sucio)) IN ("los angeles", "los angeles metro", "la") THEN "LOS ANGELES" 
+  WHEN TRIM(LOWER(Ciudad - Sucio)) IN ("san francisco", "sf", "sf bay area", "san fran") THEN "SAN FRANCISCO"  
+  WHEN TRIM(LOWER(Ciudad - Sucio)) IN ("xx","xxx", "xxxx", "12043", "46901", "0000", "-", "--", "---", "-----", "n/a", "na", "(anonymous)", "na", "a city in the uk", "a major canadian city", "too small a sample size, can't share", "a city small enough to not answer this question", "a suburb of boston") THEN "NA" 
+  ELSE TRIM(LOWER(REGEXP_REPLACE(Ciudad - Sucio, '^[^a-zA-Z0-9]+', '')))
+END
